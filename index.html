@@ -104,7 +104,7 @@ a {
 <body translate="no" >
 
   <div id="app">
-  <div id="header">
+  <div id="header" v-if="ids.length>1">
     <h1>Overwolf Apps</h1>
   </div>
   <div v-if="metadatas[id]" v-for="(id, index) in ids" :key="id" class="app-summary">
