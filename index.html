@@ -114,7 +114,7 @@ a {
     <p> {{ (ratings[id] && (ratings[id].rate_sum / ratings[id].rate_count / 5 * 100).toFixed(2) + '% across ' + ratings[id].rate_count + ' reviews' || 'loading') }} </p>
     <a download v-if="canDownload" :href="metadatas[id].DownloadURL">Download v{{metadatas[id].Version}}</a>
   </div>
-  <div id="footer">
+  <div id="footer" v-if="ids.length>1">
     <p @click="refresh" id="refresh">Refresh</p>
     <p> {{(total && total.toLocaleString() + ' total downloads') || 'loading'}} </p>
   </div>
